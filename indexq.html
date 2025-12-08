@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BMW M3 Competition — Overview</title>
+
+  <style>
+    :root{
+      --bg:#0f1720;
+      --card:#0b1220;
+      --accent:#1fb6ff;
+      --muted:#9aa6b2;
+      --glass: rgba(255,255,255,0.04);
+      --radius:14px;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1000px 400px at 10% 10%, rgba(31,182,255,0.04), transparent 8%),
+        linear-gradient(180deg,#071019 0%, #0b1220 100%);
+      color:#e6eef3;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      padding:40px;
+    }
+
+    .wrap{
+      max-width:1100px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr 380px;
+      gap:28px;
+      align-items:start;
+    }
+
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      border-radius:var(--radius);
+      padding:22px;
+      box-shadow: 0 6px 30px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.03);
+    }
+
+    header.site-header{
+      grid-column: 1 / -1;
+      display:flex;
+      justify-content:flex-start;
+      align-items:center;
+      gap:12px;
+      margin-bottom:6px;
+    }
+    .brand{
+      display:flex;
+      gap:12px;
+      align-items:center;
+    }
+    .logo {
+      width:56px;
+      height:56px;
+      border-radius:12px;
+      background:linear-gradient(135deg,#0ea5ff,#7c3aed);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:700;
+      color:white;
+      font-size:18px;
+      box-shadow: 0 6px 20px rgba(31,182,255,0.08);
+    }
+    h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:0.2px;
+    }
+    .sub{ color:var(--muted); font-size:13px }
+
+    .hero-img{
+      width:100%;
+      height:360px;
+      border-radius:12px;
+      overflow:hidden;
+      background: linear-gradient(180deg, #07111a, #0b141b);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .hero-img img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+
+    .section{ margin-top:18px; }
+
+    .specs-grid{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:12px;
+    }
+    .spec{
+      background:var(--glass);
+      padding:12px 14px;
+      border-radius:10px;
+      min-width:120px;
+      text-align:center;
+      border:1px solid rgba(255,255,255,0.02);
+    }
+    .spec b{ display:block; font-size:16px; margin-bottom:6px; color:#fff }
+    .spec span{ color:var(--muted); font-size:13px }
+
+    aside.right {
+      position:sticky;
+      top:36px;
+      height:fit-content;
+    }
+
+    .btn {
+      display:inline-block;
+      margin-top:12px;
+      padding:10px 14px;
+      border-radius:10px;
+      background:linear-gradient(90deg, var(--accent), #7c3aed);
+      color:#021220;
+      font-weight:700;
+      text-decoration:none;
+      box-shadow:0 8px 20px rgba(31,182,255,0.08);
+    }
+
+    ul.features{ padding:0 18px; margin:12px 0 0 0; }
+    ul.features li{ margin:10px 0; color:var(--muted) }
+
+    footer{
+      grid-column:1 / -1;
+      margin-top:28px;
+      color:var(--muted);
+      text-align:center;
+      font-size:13px;
+    }
+
+    @media (max-width:980px){
+      .wrap{ grid-template-columns: 1fr; padding:0 6px }
+      .hero-img{ height:260px }
+      aside.right{ position:static; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+
+    <header class="site-header">
+      <div class="brand">
+        <div class="logo">M</div>
+        <div>
+          <h1>BMW M3 Competition</h1>
+          <div class="sub">Performance sedan • Sporty • Track-capable</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="card">
+      <div class="hero-img">
+        <img src="bmw-m3.jpeg" alt="BMW M3 Competition">
+      </div>
+
+      <section class="section">
+        <h3 style="margin:0;color:#fff">Overview</h3>
+        <p style="color:var(--muted); margin-top:10px; font-size:15px; line-height:1.6">
+          The BMW M3 Competition is a high-performance sports sedan powered by a
+          twin-turbo inline-six engine, delivering sharp handling, aggressive styling,
+          and track-ready performance.
+        </p>
+      </section>
+
+      <section class="section">
+        <h3 style="margin:0;color:#fff">Key Specs</h3>
+        <div class="specs-grid">
+          <div class="spec"><b>Engine</b><span>3.0L Twin-turbo I6</span></div>
+          <div class="spec"><b>Power</b><span>~503 hp</span></div>
+          <div class="spec"><b>Transmission</b><span>8-speed automatic</span></div>
+          <div class="spec"><b>Drivetrain</b><span>RWD / AWD</span></div>
+          <div class="spec"><b>0–60 mph</b><span>~3.6 seconds</span></div>
+          <div class="spec"><b>Fuel</b><span>Premium petrol</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h3 style="margin:0;color:#fff">Highlights</h3>
+        <ul class="features">
+          <li>Adaptive M suspension</li>
+          <li>Quad exhaust with signature M sound</li>
+          <li>M xDrive (optional AWD)</li>
+          <li>Carbon-fiber interior & sporty cabin</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h3 style="margin:0;color:#fff">Trim Notes</h3>
+        <p style="color:var(--muted); margin-top:10px">
+          The Competition trim focuses on sharper performance tuning, more horsepower,
+          and aggressive handling characteristics compared to the standard M3.
+        </p>
+      </section>
+    </main>
+
+    <aside class="right">
+      <div class="card">
+        <div class="sub">Quick facts</div>
+        <ul style="margin:8px 0 0 18px;color:var(--muted);padding:0">
+          <li>Sporty 4-door layout</li>
+          <li>Carbon-ceramic brake option</li>
+          <li>Multiple driving modes</li>
+        </ul>
+      </div>
+
+      <div style="height:14px"></div>
+
+      <div class="card">
+        <div class="sub">Want to print?</div>
+        <a class="btn" href="#" style="display:block;text-align:center" onclick="window.print()">Print / Save</a>
+      </div>
+    </aside>
+
+    <footer>
+      Images may vary • Specs differ by region • For portfolio display only
+    </footer>
+
+  </div>
+</body>
+</html>
